@@ -1,2 +1,3 @@
-# ProgrammingFundamentalsI
-All of my work from my COSC-1336: Programming Fundamentals 1 class.
+# Programming Fundamentals I
+This repository contains all of my Python programs from my class COSC-1336: Programming Fundamentals I
+

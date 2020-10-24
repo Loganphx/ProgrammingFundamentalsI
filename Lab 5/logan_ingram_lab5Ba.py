@@ -1,5 +1,5 @@
 #Imports Converting_Module which contains all functions used for the program
-from converting_module import *
+from modules.converting_module import *
 
 def main():
     a = 0
