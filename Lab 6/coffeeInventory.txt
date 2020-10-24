@@ -1,0 +1,14 @@
+Blonde Roast, 15
+Medium Roast, 21
+Flavored Roast, 10
+Dark Roast, 12
+Costa Rica Tarrazu, 18
+Guatemala Antigua, 22
+House Blend, 25
+Decaf House Blend, 16
+Guatemala Antigua, 22
+House Blend, 25
+Decaf House Blend, 16
+Guatemala Antigua, 22
+House Blend, 25
+Decaf House Blend, 16
