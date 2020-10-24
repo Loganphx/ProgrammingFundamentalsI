@@ -1,5 +1,6 @@
-#Imports Converting_Module which contains all functions used for the program
-from modules.converting_module import *
+# Imports Converting_Module which contains all functions used for the program
+from converting_module import *
+
 
 def main():
     # Opens filed named conversions.txt
@@ -14,10 +15,12 @@ def main():
     try:
         option = input('Select an option: ')
         # User is given three attempts to enter a value greater than 0
+
         if option == 'a':
             # Loops ten times
-            for x in range(0,10):
+            for x in range(0, 10):
                 a = 0
+
                 while a < 3:
                     try:
                         # Gets the number of miles to convert
@@ -41,12 +44,15 @@ def main():
                                     print('ERROR: Miles must be greater than 0.')
                             else:
                                 raise Exception
+
                         except Exception:
                             print('Miles must be a numerical value.')
+
         elif option == 'b':
             # Loops ten times
-            for x in range(0,10):
+            for x in range(0, 10):
                 a = 0
+
                 # User is given three attempts to enter a valid number of gallons, otherwise the program errors and exits.
                 while a < 3:
                     try:
@@ -71,12 +77,15 @@ def main():
                                     print('ERROR: Gallons must be greater than 0.')
                             else:
                                 raise Exception
+
                         except Exception:
                             print('Gallons must be a numerical value.')
+
         elif option == 'c':
             # Loops ten times
             for x in range(0, 10):
                 a = 0
+
                 # User is given three attempts to enter a valid number of pounds, otherwise the program errors and exits.
                 while a < 3:
                     try:
@@ -101,13 +110,15 @@ def main():
                                     print('ERROR: Pounds must be greater than 0.')
                             else:
                                 raise Exception
+
                         except Exception:
                             print('Pounds must be a numerical value.')
 
         elif option == 'd':
             # Loops ten times
-            for x in range(0,10):
+            for x in range(0, 10):
                 a = 0
+
                 # User is given three attempts to enter a valid number of inches, otherwise the program errors and exits.
                 while a < 3:
                     try:
@@ -117,10 +128,12 @@ def main():
                         if centimeters != -1:
                             a = 3
                             # Writes conversion data to conversion.txt
-                            conversionFile.writelines(str(inches) + '\t Inches \t' + str(centimeters) + '\t Centimeters \n')
+                            conversionFile.writelines(
+                                str(inches) + '\t Inches \t' + str(centimeters) + '\t Centimeters \n')
                         elif centimeters == -1:
                             a += 1
                             raise ValueError
+
                     except ValueError:
                         try:
                             if a == 3:
@@ -131,12 +144,15 @@ def main():
                                     print('ERROR: Inches must be greater than 0.')
                             else:
                                 raise Exception
+
                         except Exception:
                             print('Inches must be a numerical value.')
+
         elif option == 'e':
             # Loops ten times
-            for x in range(0,10):
+            for x in range(0, 10):
                 a = 0
+
                 # User is given three attempts to enter a valid number of fahrenheit, otherwise the program errors and exits.
                 while a < 3:
                     try:
@@ -146,7 +162,8 @@ def main():
                         if celsius != -1:
                             a = 3
                             # Writes conversion data to conversion.txt
-                            conversionFile.writelines(str(fahrenheit) + '\t Fahrenheit \t' + str(celsius) + '\t Celsius \n')
+                            conversionFile.writelines(
+                                str(fahrenheit) + '\t Fahrenheit \t' + str(celsius) + '\t Celsius \n')
                         elif celsius == -1:
                             a += 1
                             raise ValueError
@@ -161,16 +178,17 @@ def main():
                                     print('ERROR: Fahrenheit cannot be greater than 1000°.')
                             else:
                                 raise Exception
+
                         except Exception:
                             print('Fahrenheit must be a numerical value.')
         else:
             raise KeyError
+
     except KeyError:
         print('ERROR: Choose a proper option')
 
-    #Closes the file.
+    # Closes the file to prevent memory leaks.
     conversionFile.close()
-
 
 
 # Calls the main function.
